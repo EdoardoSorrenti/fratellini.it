@@ -1,0 +1,250 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="it">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>week-end cortina</title>
+</head>
+
+<body bgcolor="#AAAAAA">
+<!-- ********* Inizio Fiocchi di neve ************** -->
+
+<!-- ********* Fiocchi di neve COMMENTATO -->
+
+<script language="JavaScript1.2">
+var no = 15; // snow number
+var speed = 80; // smaller number moves the snow faster
+var snowflake = "../../images/flake.gif";
+
+var ns4up = (document.layers) ? 1 : 0;  // browser sniffer
+var ie4up = (document.all) ? 1 : 0;
+var dx, xp, yp;    // coordinate and position variables
+var am, stx, sty;  // amplitude and step variables
+var i, doc_width = 800, doc_height = 600;
+if (ns4up) {
+doc_width = self.innerWidth;
+doc_height = self.innerHeight;
+} else if (ie4up) {
+doc_width = document.body.clientWidth;
+doc_height = document.body.clientHeight;
+}
+dx = new Array();
+xp = new Array();
+yp = new Array();
+am = new Array();
+stx = new Array();
+sty = new Array();
+for (i = 0; i < no; ++ i) {  
+dx[i] = 0;                        // set coordinate variables
+xp[i] = Math.random()*(doc_width-50);  // set position variables
+yp[i] = Math.random()*doc_height;
+am[i] = Math.random()*20;         // set amplitude variables
+stx[i] = 0.02 + Math.random()/10; // set step variables
+sty[i] = 0.7 + Math.random();     // set step variables
+if (ns4up) {                      // set layers
+if (i == 0) {
+document.write("<layer name=\"dot"+ i +"\" left=\"15\" ");
+document.write("top=\"15\" visibility=\"show\"><img src="http://unsito.net/fratellini/eventi/200302_cortina/\&quot;&quot;);"
+document.write(snowflake + "\" border=\"0\"></layer>");
+} else {
+document.write("<layer name=\"dot"+ i +"\" left=\"15\" ");
+document.write("top=\"15\" visibility=\"show\"><img src="http://unsito.net/fratellini/eventi/200302_cortina/\&quot;&quot;);"
+document.write(snowflake + "\" border=\"0\"></layer>");
+   }
+} else if (ie4up) {
+if (i == 0) {
+document.write("<div id=\"dot"+ i +"\" style=\"POSITION: ");
+document.write("absolute; Z-INDEX: "+ i +"; VISIBILITY: ");
+document.write("visible; TOP: 15px; LEFT: 15px;\"><img src="http://unsito.net/fratellini/eventi/200302_cortina/\&quot;&quot;);"
+document.write(snowflake + "\" border=\"0\"></div>");
+} else {
+document.write("<div id=\"dot"+ i +"\" style=\"POSITION: ");
+document.write("absolute; Z-INDEX: "+ i +"; VISIBILITY: ");
+document.write("visible; TOP: 15px; LEFT: 15px;\"><img src="http://unsito.net/fratellini/eventi/200302_cortina/\&quot;&quot;);"
+document.write(snowflake + "\" border=\"0\"></div>");
+      }
+   }
+}
+function snowNS() {  // Netscape main animation function
+for (i = 0; i < no; ++ i) {  // iterate for every dot
+yp[i] += sty[i];
+if (yp[i] > doc_height-50) {
+xp[i] = Math.random()*(doc_width-am[i]-30);
+yp[i] = 0;
+stx[i] = 0.02 + Math.random()/10;
+sty[i] = 0.7 + Math.random();
+doc_width = self.innerWidth;
+doc_height = self.innerHeight;
+}
+dx[i] += stx[i];
+document.layers["dot"+i].top = yp[i];
+document.layers["dot"+i].left = xp[i] + am[i]*Math.sin(dx[i]);
+}
+setTimeout("snowNS()", speed);
+}
+function snowIE() {  // IE main animation function
+for (i = 0; i < no; ++ i) {  // iterate for every dot
+yp[i] += sty[i];
+if (yp[i] > doc_height-50) {
+xp[i] = Math.random()*(doc_width-am[i]-30);
+yp[i] = 0;
+stx[i] = 0.02 + Math.random()/10;
+sty[i] = 0.7 + Math.random();
+doc_width = document.body.clientWidth;
+doc_height = document.body.clientHeight;
+}
+dx[i] += stx[i];
+document.all["dot"+i].style.pixelTop = yp[i];
+document.all["dot"+i].style.pixelLeft = xp[i] + am[i]*Math.sin(dx[i]);
+}
+setTimeout("snowIE()", speed);
+}
+if (ns4up) {
+snowNS();
+} else if (ie4up) {
+snowIE();
+}
+</script>
+<!-- ********* Fine Fiocchi di neve ************** -->
+<!-- ***********  Fine COMMENTO -->
+
+
+<table border="0" width="100%" height="100%" bgcolor="#D3D5DE">
+<tr>
+
+<td valign="middle" bgcolor="#D3D5DE">
+  <div align="center">
+    <center>
+
+<table border="0" width="100%" height="500" bgcolor="#D3D5DE">
+  <tr>
+
+  <td width="8%" bgcolor="#D3D5DE">
+  
+  
+  
+  &nbsp;
+ 
+  
+  
+  </td>
+	  
+  <td bordercolor="#000000" bordercolorlight="#000000" bordercolordark="#000000">
+  
+
+
+&nbsp;
+  
+
+
+<table border="0" width="100%" height="500" bordercolor="#000000" bordercolorlight="#000000" bordercolordark="#000000" cellspacing="0" cellpadding="8">
+  <tr>
+    <td width="100%" valign="top" bgcolor="#6699FF" bordercolor="#000000" bordercolorlight="#000000" bordercolordark="#000000">
+        <table border="0" width="100%">
+          <tr>
+            <td width="20%" height="30" valign="middle">
+            </td>
+    </center>
+            <td width="60%" height="30" valign="middle">
+        <p align="center"><b><font face="Verdana" size="3" color="#FFFFFF">E'
+        stata dura...</font></b>
+            </td>
+            <td width="20%" height="30" valign="middle">
+              <p align="center"><a href="../../fratellini.htm"><b><font size="2" face="Verdana" color="#FFFFFF">Home</font></b></a>
+            </td>
+          </tr>
+        </table>
+    <center>
+
+<!-- Inizio Linea rossa da 1 -->
+<table marginheight="0" marginwidth="0" leftmargin="0" topmargin="0" bgcolor="#000080" cellspacing="0" cellpadding="0" border="0" WIDTH="100%">
+   <tr>
+	<td>
+	<img src="http://unsito.net/fratellini/eventi/2002_tanz/bluspacer.gif" width="1" height="1" border="0"></td>
+	</tr>
+</table>
+<!-- Fine Linea rossa da 1 -->
+
+<!-- Inizio Linea azzurra da 10 -->
+
+<table marginheight="0" marginwidth="0" leftmargin="0" topmargin="0" bgcolor="#6699FF" cellspacing="0" cellpadding="0" border="0" WIDTH="100%">
+   <tr>
+	<td>
+	<img src="http://unsito.net/fratellini/eventi/2002_tanz/bluspacer.gif" width="1" height="10" border="0"></td>
+	</tr>
+</table>
+
+<div align="center">
+  <center>
+  <table border="0" width="100%">
+    <tr>
+      <td width="50%" align="right" valign="middle">
+        <p align="center"><a href="cortina_3.htm"><b><font color="#FFFF00" size="2" face="Verdana">Prev</font></b></a></td>
+      <td width="50%" valign="middle" align="left">
+        <p align="center"><a href="cortina_5.htm"><b><font color="#FFFF00" size="2" face="Verdana">Next</font></b></a></td>
+    </tr>
+    <tr>
+      <td width="50%" align="right" valign="middle">&nbsp;&nbsp;</td>
+      <td width="50%" valign="middle" align="left"></td>
+    </tr>
+    <tr>
+      <td width="50%" align="center" valign="middle"><img border="1" src="../../images/eventi/2003_02_cortina/oks_a03.jpg" width="350" height="262"></td>
+      <td width="50%" valign="middle" align="center"><b><font face="Verdana" size="3" color="#FFFFFF">...che
+        ne dite di un po' di relax?</font></b></td>
+    </tr>
+    <tr>
+      <td width="50%" align="center" valign="middle"><img border="1" src="../../images/eventi/2003_02_cortina/oks_a11.jpg" width="350" height="262"></td>
+      <td width="50%" align="center" valign="middle"><img border="1" src="../../images/eventi/2003_02_cortina/oks_a04.jpg" width="350" height="262"></td>
+    </tr>
+    <tr>
+      <td width="50%" align="center" valign="middle">&nbsp;</td>
+      <td width="50%" align="center" valign="middle">&nbsp;</td>
+    </tr>
+    <tr>
+      <td width="50%" align="center" valign="middle">
+        <p align="center"><a href="cortina_3.htm"><b><font color="#FFFF00" size="2" face="Verdana">Prev</font></b></a></td>
+      <td width="50%" align="center" valign="middle"><a href="cortina_5.htm"><b><font color="#FFFF00" size="2" face="Verdana">Next</font></b></a></td>
+    </tr>
+  </table>
+  </center>
+</div>
+
+<!-- Fine Linea azzurra da 10 -->
+
+    </center>
+    </td>
+    
+
+  </tr>
+</table>
+
+  <td width="8%" bgcolor="#D3D5DE">
+  </td>
+
+  </tr>
+</table>
+  </div>
+
+<table border="0" width="92%">
+  <tr>
+    <td width="79%" align="left" valign="middle">
+      <p align="right"><font face="Verdana" size="1">Questo sito è ospitato su:</font></td>
+    <td width="22%" valign="middle">
+      <p align="center"><a href="http://www.unsito.it"><img border="1" src="../../images/logo_e_varie/unsito.gif" width="100" height="32"></a></p>
+    </td>
+  </tr>
+</table>
+
+
+
+
+</tr>
+</table>
+
+
+
+</body>
+
+</html>
