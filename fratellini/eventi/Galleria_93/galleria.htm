@@ -9,6 +9,7 @@
 </head>
 
 <body bgcolor="#000080">
+<audio id="gente_della_notte" src="/fratellini/sound/Gente_della_notte.mp3" loop style="display: none;" ></audio>
 
 <p>&nbsp;</p>
 
@@ -69,10 +70,15 @@
             <td width="5%"></td>
           </tr>
         </table>
-        <p><span style="background-color: #FFFF00"><font face="Verdana" size="1" color="#FF0000">H</font><font face="Verdana" size="1" color="#FF0000">ai
-        una connessione molto (ma molto) veloce? </font><a href="galleria_musica.htm"><font face="Verdana" size="1" color="#0000FF">clicca
+        <p id="testo_play"><span style="background-color: #FFFF00"><font face="Verdana" size="1" color="#FF0000">H</font><font face="Verdana" size="1" color="#FF0000">ai
+        una connessione molto (ma molto) veloce? </font><a href="#" id="link_della_notte"><font face="Verdana" size="1" color="#0000FF">clicca <!-- Edit Edo Jr: prima linkava a galleria_musica.htm, per vari motivi non funzionava su browser moderni, ora unico file-->
         qui</font></a><font face="Verdana" size="1" color="#FF0000"> e attendi
-        la musica...</font></span>
+        la musica...</font></span> </p>
+        <p id="testo_stop" style="display: none;"><span style="background-color: #FFFF00"><font face="Verdana" size="1" color="#FF0000">Stai
+        scaricando un MP3 mitico (circa 4Mb)... Se ti stai collegando con un
+        modem a 56Kbps devi aspettare 10 minuti circa. </font><a href="#" id="stop_della_notte"><font face="Verdana" size="1" color="#0000FF">Clicca
+        qui</font></a><font face="Verdana" size="1" color="#FF0000"> per tornare
+        indietro</font><font face="Verdana" size="1" color="#FF0000">.</font></span>
     </td>
     <td width="2%" valign="top" bgcolor="#FFFFFF">
     </td>
@@ -137,6 +143,48 @@
     </td>
   </tr>
 </table>
+
+
+<!-- Aggiunte Edo 2025, gestione audio moderna-->
+<script type="text/javascript">
+// 1. Get references to the elements
+const audio = document.getElementById('gente_della_notte');
+const playButton = document.getElementById('link_della_notte');
+const stopButton = document.getElementById('stop_della_notte');
+
+const playText = document.getElementById('testo_play');
+const stopText = document.getElementById('testo_stop');
+
+// 2. Attach a click event listener to the anchor tag
+playButton.addEventListener('click', function(event) {
+    // 3. Prevent the default action of the link (which is to navigate)
+    event.preventDefault();
+
+    // 4. Play the audio
+    audio.play()
+        .then(() => {
+            // Optional: You can do something after the audio starts playing
+            console.log("Audio funziona, ciao da Edo 2025!");
+            playText.style.display = 'none';
+            stopText.style.display = 'block';
+        })
+        .catch(error => {
+            // Handle cases where playback might be blocked (e.g., by browser autoplay policies)
+            console.error("Audio non funziona, oops:", error);
+        });
+});
+
+stopButton.addEventListener('click', function(event) {
+    event.preventDefault();
+
+    // Pause the audio
+    audio.pause();
+    audio.currentTime = 0; // Optional: Reset to the beginning
+
+    playText.style.display = 'block';
+    stopText.style.display = 'none';
+});
+</script>
 
 </body>
 
